@@ -13,30 +13,25 @@ class task:
         self._description = description
         self._status = status
 
+def create_list(newList):
+    newList = []
 
-taskArray = []
+def remove_list(givenList):
+    for i in givenList:
+        remove_task(givenList[i], givenList)
 
+def addTask(taskToAdd, listArray):
+    listArray.append(taskToAdd)
 
+def remove_task(taskToRemove, listArray):
+    listArray.remove(taskToRemove)
 
-def create_list(taskToAdd, taskArray):
-    taskArray.append(taskToAdd)
-    
-    
-def remove_list(taskToRemove, taskArray):
-    taskArray.remove(taskToRemove)
-  
+def move_task(taskToMove, currentList, newList):
+    addTask(taskToMove, newList)
+    remove_task(taskToMove, currentList)
 
-    
-def remove_task():
-    
-def move_task():
-    
-def save()
-    
-
-file = "db.json"
-
-with open(file) as file:
+filePath = "db.json"
+with open(filePath) as file:
     json_db = json.load(file)
 
 print(json_db)
