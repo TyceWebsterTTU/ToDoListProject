@@ -1,0 +1,5 @@
+For each reminder:
+- when (time)
+- where (location)
+- what (description)
+- status (complete, incomplete)
